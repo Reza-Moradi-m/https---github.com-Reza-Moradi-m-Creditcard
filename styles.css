@@ -38,15 +38,17 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
+  grid-column: span 2; /* Span 2 columns for a full-width input */
 }
 
 #card-btn:hover {
-  background-color: rgba(251, 251, 251, 1);
+  background-color: rgb(230, 91, 91);
 }
 
 #card-cvc {
   width: 60px;
   margin-bottom: 0;
+  grid-column: span 2; /* Span 2 columns for a full-width input */
 }
 
 #card-front,
@@ -62,6 +64,7 @@ body {
   letter-spacing: 1px;
   font-weight: 300;
   color: white;
+  grid-column: 1 / -1; /* Span across all columns */
 }
 
 #card-image {
@@ -75,11 +78,13 @@ body {
 
 #card-month {
   width: 45% !important;
+  grid-column: span 2; /* Span 2 columns for a full-width input */
 }
 
 #card-number,
 #card-holder {
   width: 100%;
+  grid-column: span 2; /* Span 2 columns for a full-width input */
 }
 
 #card-stripe {
@@ -101,6 +106,7 @@ body {
 #card-year {
   width: 45%;
   float: right;
+  grid-column: span 2; /* Span 2 columns for a full-width input */
 }
 
 #cardholder-container {
@@ -134,6 +140,9 @@ body {
   height: 290px;
   position: relative;
   margin-top: 10cm;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 
 #form-errors {
